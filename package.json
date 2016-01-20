@@ -1,0 +1,23 @@
+{
+  "name": "RPS",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "^0.4.2",
+    "grunt-cli": "0.1.13",
+    "grunt-autoprefixer": "*",
+    "grunt-bowercopy": "*",
+    "grunt-concat-css": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jasmine": "^0.9.2",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-csso": "*",
+    "matchdep": "*",
+    "grunt-bower-task": "*",
+    "grunt-contrib-csslint": "*"
+  },
+  "dependencies": {
+    "grunt-cli": "^0.1.13"
+  }
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="en-GB">
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta name="description" content="Rock Paper Scissors">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="public/css/styles.min.css">
+</head>
+
+<body>
+    <!-- RPS Wrapper -->
+    <div class="gameWrapper">
+
+        <!-- Logo, Mode and Timer -->
+        <header id="mainHeader" class="mainHeader">
+            <h1>RPS <span>Master</span></h1>
+            <ul>
+                <li>
+                    <span>Game mode</span>
+                    <span class="mode">User VS Cpu</span>
+                </li>
+                <li>
+                    <span>Time Left</span>
+                    <span class="times">5</span>
+                </li>
+            </ul>
+        </header>
+
+        <!-- Cards Section -->
+        <section id="gameScreen" class="gameScreen" style="display:none;">
+            <ul id="users" class="users">
+                <li id="user1">
+                    <span></span>
+                </li>
+                <li id="user2">
+                    <span></span>
+                </li>
+                <li class="vs">
+                    <span>VS</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Game Modes -->
+        <section id="gameOptions" class="gameOptions">
+            <ul id="gameModes" class="gameModes">
+                <li>
+                    <a class="active" href="#" data-mode="user" title="Rock">User vs CPU</a>
+                </li>
+                <li>
+                    <a href="#" data-mode="cpu" title="Paper">CPU vs CPU</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Controller -->
+        <aside id="gamePad" class="gamePad">
+            <header>
+                <h3>
+                    <span>RPC Master</span>
+                </h3>
+            </header>
+
+            <div class="wrapper">
+
+                <div class="ctrl-cross"></div>
+                <ul id="optionBtns" class="optionBtns">
+                    <li>
+                        <a title="Select" id="btnSelect" href="#">Select</a>
+                    </li>
+                    <li>
+                        <a title="Start" id="btnStart" href="#">Start</a>
+                    </li>
+                </ul>
+
+
+
+                <ul id="userOptions" class="userOptions">
+                    <li>
+                        <a href="#" data-option="0" title="Rock">R</a>
+                    </li>
+                    <li>
+                        <a href="#" data-option="1" title="Paper">P</a>
+                    </li>
+                    <li>
+                        <a href="#" data-option="2" title="Scissors">S</a>
+                    </li>
+                </ul>
+            </div>
+
+            <footer>
+                <h4>
+                    <span>Challenge me!</span>
+                </h4>
+            </footer>
+        </aside>
+
+        <!-- Game Stats -->
+        <table id="gameResults" class="gameResults" style="display:none;">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Wins</th>
+                    <th>Rocks</th>
+                    <th>Papers</th>
+                    <th>Scissors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="user-data">
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- Winner Popup -->
+        <div id="winner" class="winner"></div>
+
+        <!-- Credentials & reset button -->
+        <footer id="mainFooter" class="mainFooter">
+        <span>&copy; 2015 Ioannis Kottis </span>
+        <a href="#" title="Reset">Reset</a>
+        </footer>
+
+        <script src="public/js/scripts.min.js"></script>
+</body>
+
+</html>

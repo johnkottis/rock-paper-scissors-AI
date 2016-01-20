@@ -1,0 +1,17 @@
+{
+  "name": "Front End Skill Test",
+  "version": "1.0.0",
+  "author": "Ioannis Kottis",
+  "description": "External Libs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize.css": "*"
+  }
+}

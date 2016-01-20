@@ -1,0 +1,450 @@
+/***
+*  	1. Generic Styles
+*   2  Application Wrapper
+*   	2.1 Select Game Mode
+*   	2.2 Main Header
+*   		2.2.1 Logo
+*   		2.2.2 Info
+*   	2.3 Gamepad
+*   		2.3.1 Gamepad Cross
+*			2.3.2 Options buttons
+*			2.3.3 RPS Buttons
+*			2.3.4 Gamepad Footer
+*   3.	Input Select
+*  	4. Users Panel
+*	5. Statistics Table
+*	6. Statistics
+*  	7. Responsive Styles
+*/
+
+
+/*** 1. Generic Styles ***/
+html {
+    font-family: 'PT Sans Narrow', sans-serif;
+    width: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .8;
+}
+
+.fg-red {
+    color: #ff0000;
+}
+
+/*** 3. Application Wrapper ***/
+.gameWrapper {
+    border: 2px solid #000;
+    border-radius: 2px;
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+}
+
+/*** 2.1 Select Game Mode ***/
+.gameOptions {
+    float: left;
+    width: 100%;
+}
+
+
+/*** 2.2 Main Header ***/
+.mainHeader {
+    width: 100%;
+}
+
+/*** 2.2.1 Logo ***/
+    .mainHeader h1 {
+        color: #000;
+        font-size: 58px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+        .mainHeader h1 span {
+            color: #ff0000;
+            display: inline-block;
+            font-size: 25px;
+            font-weight: 400;
+            margin-left: -20px;
+            position: relative;
+            text-transform: lowercase;
+            top: 5px;
+        }
+
+/*** 2.2.2 Info ***/
+    .mainHeader ul {
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        display: inline-block;
+        float: left;
+        margin: 0 0 10px;
+        padding: 0 0 5px;
+        width: 100%;
+    }
+
+
+        .mainHeader ul li {
+            display: inline-block;
+            float: left;
+            margin-right: 5%;
+            text-align: left;
+            width: 45%;
+        }
+
+            .mainHeader ul li span {
+                font-size: 13px;
+            }
+
+            .mainHeader ul li:last-child {
+                text-align: right;
+                margin-right: 0;
+            }
+
+/*** 2.3 Gamepad ***/
+.gamePad {
+    background-color: #fff;
+    box-sizing: border-box;
+    float: left;
+    height: 190px;
+    max-width: 500px;
+    width: 100%;
+}
+
+    .gamePad header {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        float: left;
+        width: 100%;
+    }
+
+    .gamePad .wrapper {
+        float: left;
+        height: 115px;
+        width: 100%;
+    }
+
+    .gamePad header h3 {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+        .gamePad header h3 span:after {
+            border-top: 2px solid #000;
+            content: "";
+            float: right;
+            width: 50px;
+        }
+
+        .gamePad header h3 span::before {
+            border-top: 2px solid #000;
+            content: "";
+            float: left;
+            width: 50px;
+        }
+
+/*** 2.3.1 Gamepad Cross ***/
+    .gamePad .ctrl-cross {
+        background-image: url("../img/controller-cross.png");
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        float: left;
+        height: 80px;
+        margin-left: 20px;
+        padding: 0;
+        width: 80px;
+    }
+
+/*** 2.3.2 Options buttons ***/
+    .gamePad .optionBtns {
+        box-sizing: border-box;
+        display: inline-block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(70% - 80px);
+    }
+
+        .gamePad .optionBtns li {
+            background: #efefef;
+            border-radius: 2px;
+            display: inline-block;
+            margin: 0 0 0 12px;
+            padding: 1px 5px;
+            position: relative;
+            text-align: right;
+        }
+
+            .gamePad .optionBtns li a {
+                color: #000;
+                font-size: 13px;
+            }
+
+/*** 2.3.3 RPS Buttons ***/
+    .gamePad .userOptions {
+        display: block;
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 25%;
+        transform: translateY(-50%);
+        width: 30%;
+    }
+
+        .gamePad .userOptions li {
+            background-color: #ff0000;
+            border-radius: 17px;
+            display: inline-block;
+            float: left;
+            margin-right: 4px;
+            padding: 5px 13px;
+        }
+
+        .gamePad .userOptions li.sel {
+            border: 1px solid #000;
+        }
+
+            .gamePad .userOptions li a {
+                color: #000;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+/*** 2.3.4 Gamepad Footer ***/
+    .gamePad footer {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        float: left;
+        width: 100%;
+    }
+
+        .gamePad footer h4 {
+            margin: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+
+            .gamePad footer h4 span:after {
+                border-top: 2px solid #000;
+                content: "";
+                float: right;
+                position: relative;
+                top: 20px;
+                width: 50px;
+            }
+
+            .gamePad footer h4 span::before {
+                border-top: 2px solid #000;
+                content: "";
+                float: left;
+                position: relative;
+                top: 20px;
+                width: 50px;
+            }
+
+
+/*** 3 Game mode ***/
+.gameModes {
+    box-sizing: border-box;
+    list-style: outside none none;
+    padding: 10px;
+    width: 100%;
+}
+
+    .gameModes li {
+        display: inline-block;
+        float: left;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+        .gameModes li a {
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding-left: 8px;
+            text-transform: uppercase;
+        }
+
+            .gameModes li a.active {
+                padding-left: 0;
+            }
+
+                .gameModes li a.active:before {
+                    content: ">";
+                }
+
+/*** 4. Users Panel ***/
+.users {
+    background: #63a0fd;
+    display: inline-block;
+    float: left;
+    height: 100px;
+    list-style: outside none none;
+    margin: 0 0 20px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+    .users li {
+        display: inline-block;
+        float: left;
+        height: 100px;
+        width: 50%;
+    }
+
+        .users li span {
+            background-image: url("../img/moves.jpg");
+            background-position: -302px 0;
+            background-size: cover;
+            color: #ff0000;
+            display: inline-block;
+            float: none;
+            font-size: 24px;
+            font-weight: 700;
+            height: 100px;
+            line-height: 1;
+            margin: 0 auto;
+            text-shadow: 1px 0 2px #000;
+            text-transform: uppercase;
+            width: 100px;
+        }
+
+
+        .users li.rps0 span {
+            background-position: 0 0;
+        }
+
+        .users li.rps1 span {
+            background-position: -189px 0;
+        }
+
+        .users li.rps2 span {
+            background-position: -497px 0;
+        }
+
+        .users li.vs {
+            left: 50%;
+            position: absolute;
+            top: 25%;
+            transform: translate(-50%);
+        }
+
+            .users li.vs span {
+                background: #ff0000;
+                border-radius: 40px;
+                color: #FFFF00;
+                font-size: 20px;
+                height: auto;
+                padding: 13px 15px;
+                position: relative;
+                width: auto;
+            }
+
+/*** 5. Statistics ***/
+.gameResults {
+    border: 2px solid #000;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .gameResults tr th {
+        border: 2px solid #000;
+        color: #63A0FD;
+    }
+
+    .gameResults tr td {
+        border: 2px solid #000;
+        color: #333;
+        text-align: center;
+    }
+
+        .gameResults tr td:first-child {
+            font-weight: 700;
+        }
+
+/*** 6. Game Over Popup ***/
+.winner {
+    background: #000 none repeat scroll 0 0;
+    border: 2px solid #efefef;
+    color: #fff;
+    display: none;
+    height: 120px;
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    top: 15%;
+    transform: translate(-50%, -15%);
+    vertical-align: middle;
+    width: 200px;
+}
+
+/*** 7. Main Footer ***/
+.mainFooter {
+    float: left;
+    margin: 10px 0 0;
+    width: 100%;
+}
+
+.mainFooter span {
+    display: inline-block;
+    font-style: 10px;
+    color: #000;
+}
+
+.mainFooter a {
+  background: #efefef none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #000;
+  float: right;
+  padding: 5px 10px;
+}
+
+
+
+/*** 8. Responsive Styles ***/
+@media (min-width: 968px) {
+    .gameResults {
+        float: left;
+        margin-left: 50px;
+        min-width: 500px;
+        width: auto;
+    }
+
+    .gameOptions {
+        float: right;
+        width: auto;
+    }
+}
